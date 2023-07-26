@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
+import { createRoot } from "react-dom/client";
 import "./index.css";
 
 function App() {
@@ -12,5 +12,7 @@ function App() {
     </>
   );
 }
+const domNode = document.getElementById("app");
+const root = createRoot(domNode);
 
-ReactDOM.render(<App />, document.getElementById("app"));
+root.render(<App />);
